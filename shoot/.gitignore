@@ -44,6 +44,8 @@ sysinfo.txt
 *.opendb
 *.VC.db
 
+*.exe
+
 ###
 # OS generated
 ###

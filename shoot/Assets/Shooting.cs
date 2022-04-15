@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     private Camera mainCamera;
     private Vector3 mousePos;
     public GameObject bullet;
+    public Transform rotationPointTransform;
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
@@ -39,7 +40,7 @@ public class Shooting : MonoBehaviour
 
         if(Input.GetMouseButton(0) && canFire) 
         {
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            Instantiate(bullet, rotationPointTransform.position, Quaternion.identity);
             canFire = false;
         }
     }
