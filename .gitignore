@@ -15,6 +15,13 @@
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
+/shoot/[Aa]ssets/AssetStoreTools*
+/shoot/[Bb]uild/
+/shoot/[Ll]ibrary/
+/shoot/[Ll]ocal[Cc]ache/
+/shoot/[Oo]bj/
+/shoot/[Tt]emp/
+/shoot/[Uu]nityGenerated/
 # file on crash reports
 sysinfo.txt
 
@@ -25,6 +32,7 @@ sysinfo.txt
 ###
 # VS/MD solution and project files
 ###
+/shoot/[Ee]xportedObj/
 [Ee]xportedObj/
 *.booproj
 *.csproj
@@ -67,10 +75,13 @@ crashlytics-build.properties
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/shoot/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/shoot/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/shoot/[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Packed Addressables
 [Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
@@ -78,3 +89,15 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 [Aa]ssets/[Ss]treamingAssets/aa.meta
 [Aa]ssets/[Ss]treamingAssets/aa/*
+/shoot/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/shoot/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+#Plugins
+/[Aa]ssets/Plugins
+/[Aa]ssets/Plugins/*
+/Assets/Plugins
+/Assets/Plugins/*
+/shoot/[Aa]ssets/Plugins
+/shoot/[Aa]ssets/Plugins/*
+/shoot/Assets/Plugins
+/shoot/Assets/Plugins/*
