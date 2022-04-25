@@ -39,8 +39,8 @@ public class EnemyMonoBehaviour : MonoBehaviour
         if (other.tag == "Bullet")
         {
             Debug.Log("COLIDIU");
-            //this.takeDamage(other.gameObject.GetComponent<BulletMonoBehaviour>().doDamage());
-            this.takeDamage(5);
+            this.takeDamage(other.gameObject.GetComponent<SkillMonoBehaviour>().DoDamage());
+           
             Destroy(other.gameObject);
         }
     }

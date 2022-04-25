@@ -419,5 +419,9 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6504464157723675230, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
+      propertyPath: m_Name
+      value: SkillTransform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
