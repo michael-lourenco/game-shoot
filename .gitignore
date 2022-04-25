@@ -7,6 +7,8 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+/shoot/[Ll]ogs/
+/shoot/Logs/
 /[Uu]ser[Ss]ettings/
 [Aa]ssets/AssetStoreTools*
 [Bb]uild/
