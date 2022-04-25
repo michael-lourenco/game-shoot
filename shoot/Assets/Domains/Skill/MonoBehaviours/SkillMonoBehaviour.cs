@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class SkillMonoBehaviour : MonoBehaviour
 {
+    public SkillBlueprint skill;
     private Vector3 mousePos;
     private Camera mainCamera;
     private Rigidbody2D rb;
-    public float force;
+    private float force;
+
+    private int attack;
     // Start is called before the first frame update
     void Start()
     {
+        attack = skill.attack;
+        force = skill.force;
+
+
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -26,4 +33,9 @@ public class BulletScript : MonoBehaviour
     {
         
     }
+
+    public int DoDamage() {
+        return this.attack;
+    }
+    
 }
