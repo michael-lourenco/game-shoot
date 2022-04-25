@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 348730166}
   - component: {fileID: 348730165}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -357,7 +357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6504464157541171289, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6504464157541171289, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,6 +402,22 @@ PrefabInstance:
     - target: {fileID: 6504464157541171293, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504464157722109367, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4237718
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504464157722109367, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4237718
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504464157722109367, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504464157722109367, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d40f3a8e098ff840b6c0fe884aa86d3, type: 3}
