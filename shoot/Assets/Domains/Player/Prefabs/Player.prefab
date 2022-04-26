@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 6504464157722109365}
   - component: {fileID: 6504464157722109367}
   - component: {fileID: 6504464157722109364}
+  - component: {fileID: 532329927}
   m_Layer: 0
   m_Name: RotationPoint
   m_TagString: Untagged
@@ -208,9 +209,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8396226, g: 0.4237718, b: 0.4237718, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -237,6 +238,21 @@ MonoBehaviour:
   bulletTransform: {fileID: 6504464157723675225}
   canFire: 0
   timeBetweenFiring: 1
+--- !u!114 &532329927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6504464157722109370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76f259f3f71c4f4ab35441419a2d314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetGameObject: {fileID: 8683319672989125509, guid: 048ad16de6d671a408603c3b92e4f5ee, type: 3}
+  skill: {fileID: 11400000, guid: 0e1c101b50f9f714c81933dc0687c9f3, type: 2}
+  key: 32
 --- !u!1 &6504464157723675230
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +264,7 @@ GameObject:
   - component: {fileID: 6504464157723675225}
   - component: {fileID: 6504464157723675224}
   m_Layer: 0
-  m_Name: BulletTransform
+  m_Name: SkillTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

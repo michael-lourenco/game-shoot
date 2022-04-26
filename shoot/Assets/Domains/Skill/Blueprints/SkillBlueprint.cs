@@ -5,9 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Skill", menuName = "ScriptableObjects/Skills", order = 1)]
 public class SkillBlueprint : ScriptableObject
 {
+    public GameObject skillGameObject;
     public string skillName;
     public int attack;
-
     public float force;
+    public float  cooldownTime;
+    public float activeTime;
+
+    public virtual void Activate(GameObject parent) {}
+    public virtual void BeginCooldown(GameObject parent) {}
 
 }
