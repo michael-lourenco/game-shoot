@@ -17,5 +17,5 @@ MonoBehaviour:
   attack: 10
   force: 7
   cooldownTime: 1
-  activeTime: 1
+  activeTime: 0.1
   rotationPointTransform: {fileID: 4026722713157634037, guid: 048ad16de6d671a408603c3b92e4f5ee, type: 3}

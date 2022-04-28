@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillHolderMonoBehaviour : MonoBehaviour
 {
 
     public GameObject targetGameObject;
+    public Image skillImage;
     public SkillBlueprint skill;
     private Vector3 mousePos;
     private Camera mainCamera;
@@ -31,31 +33,52 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
         switch (state)
         {
             case  SkillState.READY:
-                if (Input.GetKeyDown(key)) {    
-                    skill.Activate(targetGameObject);
-                    state = SkillState.ACTIVE;
-                    activeTime = skill.activeTime;
-                }
+                UpdateReadyState();
             break;
             case  SkillState.ACTIVE:
-                if(activeTime > 0) {
-                    activeTime -= Time.deltaTime;
-                } 
-                else{
-                    skill.BeginCooldown(targetGameObject);
-                    state = SkillState.COOLDOWN;
-                    cooldownTime = skill.cooldownTime;
-                }
+                UpdateActiveState();
             break;
             case  SkillState.COOLDOWN:
-                if(cooldownTime > 0) {
-                    cooldownTime -= Time.deltaTime;
-                } 
-                else{
-                    state = SkillState.READY;
-                }
+                UpdateCoolDown();
             break;
         }
 
+    }
+
+    void UpdateReadyState() {
+        if (Input.GetKeyDown(key)) {    
+            skill.Activate(targetGameObject);
+            state = SkillState.ACTIVE;
+            activeTime = skill.activeTime;
+            skillImage.GetComponent<Image>().color = new Color32(255,255,255,255);                    
+        }
+    }
+
+    void UpdateActiveState() {
+        if(activeTime >= 0f) {
+            activeTime -= Time.deltaTime; 
+            skillImage.GetComponent<Image>().color = new Color32(255,255,255,0);
+        } 
+        else {
+            skill.BeginCooldown(targetGameObject);
+            state = SkillState.COOLDOWN;
+            cooldownTime = skill.cooldownTime;
+            skillImage.fillAmount = 0f;
+            activeTime = 0f;
+        }
+    }
+
+    void UpdateCoolDown() {
+        if(cooldownTime >= 0f) {
+            cooldownTime -= Time.deltaTime;
+            skillImage.fillAmount += 1 / cooldownTime * Time.deltaTime;
+            skillImage.GetComponent<Image>().color = new Color32(255,255,255,20);
+        } 
+        else {
+            skillImage.fillAmount = 1f;
+            cooldownTime = 0f;
+            skillImage.GetComponent<Image>().color = new Color32(255,255,255,255); 
+            state = SkillState.READY;
+        }
     }
 }
