@@ -10,12 +10,13 @@ public class SkillMonoBehaviour : MonoBehaviour
     private Rigidbody2D rb;
     private float force;
 
-    private int attack;
+    
     // Start is called before the first frame update
     void Start()
     {
-        attack = skill.attack;
-        force = skill.force;
+        
+        skill.Activate(skill.skillGameObject);
+        /* force = skill.force;
 
 
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -25,7 +26,7 @@ public class SkillMonoBehaviour : MonoBehaviour
         Vector3 rotation = transform.position - mousePos;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0, rot + 90);
+        transform.rotation = Quaternion.Euler(0,0, rot + 90);*/
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class SkillMonoBehaviour : MonoBehaviour
     }
 
     public int DoDamage() {
-        return this.attack;
+        return skill.attack;
     }
     
 }
