@@ -5,7 +5,7 @@
 Waves de inimigos aparecem na tela em direção ao personagem do jogador.
 O jogador deve eliminar todas as waves para passar de fase.
 
-Durante a fase o jogador recebe moedas e pontos de experiencia.
+Durante a fase o jogador recebe moedas e pontos de experiência.
 
 Com as moedas ele pode, durante a partida:
     - comprar aprimoramentos
@@ -24,7 +24,7 @@ Tasks
 
  - Fazer um wave game shot
  - Desenvovler o player
-    - o player tem até 5 skills para utilizar
+    - o player tem até 4 skills para utilizar
     - o player tem 1 ataque básico
     - no primeiro momento o player não se movimenta, ficando preso ao centro do mapa
     - para atirar deve utilizar o mouse, o ataque irá na direção do mouse
@@ -34,7 +34,18 @@ Tasks
 
  - Desenvolver o Inimigo
  - Desenvolver waves
- - Desenvolver as skills
+ - Desenvolver as **Skills**
+    - Sistema de Skills
+        - Existe um script base de onde todas as skills derivam: **SkillBlueprint** (é um ScriptableObject)
+        - Uma Skill possui os seguintes atributos por padrão:
+            - **skillGameObject** - objeto que é instanciado quando a skill é ativada;
+            - **skillName** - nome da skill;
+            - **attack** - dano base da skill;
+            - **force** - força aplicada para definir a velocidade do projétil;
+            - **cooldownTime** - tempo de espera necessário antes de conseguir utilizar a skill;
+            - **activeTime** - tempo de duração da skill após acionada;
+
+
  - Desenvolver o inventário
  - Desenvolver a HUD
  - Desenvolver os sons
