@@ -18,12 +18,29 @@
 [Tt]emp/
 [Uu]nityGenerated/
 /shoot/[Aa]ssets/AssetStoreTools*
+/shoot/[Aa]ssets/TextMesh*
+/shoot/[Aa]ssets/TextMesh Pro/*
+/shoot/[Aa]ssets/TextMesh Pro*
+/shoot/[Aa]ssets/TextMesh Pro
 /shoot/[Bb]uild/
 /shoot/[Ll]ibrary/
 /shoot/[Ll]ocal[Cc]ache/
 /shoot/[Oo]bj/
 /shoot/[Tt]emp/
 /shoot/[Uu]nityGenerated/
+/shoot/[Ll]ogs/
+/shoot/Logs/
+/shoot/[Ll]ogs/*
+/shoot/Logs/*
+/shoot/[Ll]ogs*
+/shoot/Logs*
+shoot/[Ll]ogs/
+shoot/Logs/
+shoot/Logs
+shoot/[Ll]ogs/*
+shoot/Logs/*
+shoot/[Ll]ogs*
+shoot/Logs*
 # file on crash reports
 sysinfo.txt
 
