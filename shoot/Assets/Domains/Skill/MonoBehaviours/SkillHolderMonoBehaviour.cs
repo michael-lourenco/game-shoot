@@ -7,8 +7,6 @@ using TMPro;
 
 public class SkillHolderMonoBehaviour : MonoBehaviour
 {
-
-    public GameObject targetGameObject;
     public Image skillImage;
     public TextMeshProUGUI skillCooldownText;
     public SkillBlueprint skill;
@@ -33,6 +31,7 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
     void Start() {
         skillCooldownText.text = "";
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -53,7 +52,7 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
 
     void UpdateReadyState() {
         if (Input.GetKeyDown(key)) {    
-            skill.Activate(targetGameObject);
+            skill.Activate(skill.skillGameObject);
             state = SkillState.ACTIVE;
             activeTime = skill.activeTime;
             skillImage.GetComponent<Image>().color = new Color32(255,255,255,255);                    
@@ -66,7 +65,7 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
             skillImage.GetComponent<Image>().color = new Color32(255,255,255,0);
         } 
         else {
-            skill.BeginCooldown(targetGameObject);
+            skill.BeginCooldown(skill.skillGameObject);
             state = SkillState.COOLDOWN;
             cooldownTime = skill.cooldownTime;
             skillImage.fillAmount = 0f;
@@ -89,4 +88,5 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
             state = SkillState.READY;
         }
     }
+
 }

@@ -1087,7 +1087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76f259f3f71c4f4ab35441419a2d314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGameObject: {fileID: 8683319672989125509, guid: b308699bc6b57f84ea5075ed2fc2b8d6, type: 3}
   skillImage: {fileID: 555328218}
   skillCooldownText: {fileID: 2030511178}
   skill: {fileID: 11400000, guid: 70fbea914f472974097b90a011152bdf, type: 2}
@@ -1104,7 +1103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76f259f3f71c4f4ab35441419a2d314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGameObject: {fileID: 8683319672989125509, guid: a5556d1780af72a44832102bc74011a1, type: 3}
   skillImage: {fileID: 1847445974}
   skillCooldownText: {fileID: 528089241}
   skill: {fileID: 11400000, guid: 7f6d15ef61b337e4aad797a2ef0d95c2, type: 2}
@@ -1121,7 +1119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76f259f3f71c4f4ab35441419a2d314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetGameObject: {fileID: 8683319672989125509, guid: 3017ae3824cb1314eb861e43845d9590, type: 3}
   skillImage: {fileID: 1821497143}
   skillCooldownText: {fileID: 26398427}
   skill: {fileID: 11400000, guid: 2fc7acf3fd528d54290417d278cdd08e, type: 2}
