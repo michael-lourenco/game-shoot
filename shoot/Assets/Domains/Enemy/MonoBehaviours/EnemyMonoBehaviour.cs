@@ -33,13 +33,17 @@ public class EnemyMonoBehaviour : MonoBehaviour
         }
     }
 
+    public int DoDamage() {
+        return enemyBlueprint.attack;
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.tag == "Bullet")
         {
             Debug.Log("COLIDIU");
-            this.takeDamage(other.gameObject.GetComponent<BulletMonoBehaviour>().DoDamage());
+            this.takeDamage(other.gameObject.GetComponent<SkillMonoBehaviour>().DoDamage());
            
             Destroy(other.gameObject);
         }

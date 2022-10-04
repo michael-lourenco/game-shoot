@@ -7,5 +7,6 @@ public class EnemyBlueprint : ScriptableObject
 {
     public string enemyName;
     public int hp;
+    public int attack;
 
 }

@@ -23,12 +23,28 @@ Se sua vida chegar a zero, ele morre e a fase termina.
 Tasks
 
  - Fazer um wave game shot
- - Desenvovler o player
-    - o player tem até 4 skills para utilizar
-    - o player tem 1 ataque básico
-    - no primeiro momento o player não se movimenta, ficando preso ao centro do mapa
+ - Desenvovler o **Player**
+    - Atributos:
+        - nome
+        - imagem em game
+        - imagem na HUD
+        - hp
+        - stamina
+        - mana
+        - skills
+    - Ações
+        - atacar com ataque básico
+        - utilizar skill
+        - dar dano
+        - receber dano
+        - morrer
+        - curar
+    - o Player tem skills
+    - o Player tem até 4 slots de skills ativas para utilizar
+    - o Player tem 1 ataque básico
+    - no primeiro momento o Player não se movimenta, ficando preso ao centro do mapa
     - para atirar deve utilizar o mouse, o ataque irá na direção do mouse
-    - para utilizar uma skill, o player deve apertar o botão do teclado referente aquela skill (no caso: q, w, e, r)
+    - para utilizar uma skill, o Player deve apertar o botão do teclado referente aquela skill (no caso: q, w, e, r)
     - assim que apertar o botão, a skill será ativada
     - se for uma skill de pontaria, a mesma seguirá a posição do mouse como referência.
 

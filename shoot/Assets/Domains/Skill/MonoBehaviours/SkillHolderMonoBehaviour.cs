@@ -9,7 +9,11 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
 {
     public Image skillImage;
     public TextMeshProUGUI skillCooldownText;
-    public SkillBlueprint skill;
+    //public SkillBlueprint skill;
+
+    public GameObject skillPrefab;
+
+    public Transform transformLocationToInstantiate;
     private Vector3 mousePos;
     private Camera mainCamera;
     private Rigidbody2D rb;
@@ -17,7 +21,7 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
     private float cooldownTime;
     private float activeTime;
     private int attack;
-
+    public SkillMonoBehaviour skillMonoBehaviour;
     enum SkillState {
         READY,
         ACTIVE,
@@ -30,6 +34,7 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
 
     void Start() {
         skillCooldownText.text = "";
+        skillMonoBehaviour = skillPrefab.GetComponent<SkillMonoBehaviour>();
     }
 
     // Update is called once per frame
@@ -52,9 +57,9 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
 
     void UpdateReadyState() {
         if (Input.GetKeyDown(key)) {    
-            skill.Activate(skill.skillGameObject);
+            skillMonoBehaviour.skill.Activate(skillPrefab.gameObject, transformLocationToInstantiate);
             state = SkillState.ACTIVE;
-            activeTime = skill.activeTime;
+            activeTime = skillMonoBehaviour.skill.activeTime;
             skillImage.GetComponent<Image>().color = new Color32(255,255,255,255);                    
         }
     }
@@ -65,9 +70,9 @@ public class SkillHolderMonoBehaviour : MonoBehaviour
             skillImage.GetComponent<Image>().color = new Color32(255,255,255,0);
         } 
         else {
-            skill.BeginCooldown(skill.skillGameObject);
+            skillMonoBehaviour.skill.BeginCooldown(skillPrefab.gameObject);
             state = SkillState.COOLDOWN;
-            cooldownTime = skill.cooldownTime;
+            cooldownTime = skillMonoBehaviour.skill.cooldownTime;
             skillImage.fillAmount = 0f;
             activeTime = 0f;
         }
